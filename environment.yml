@@ -1,0 +1,9 @@
+channels:
+  - conda-forge
+dependencies:
+  - flask
+  - numpy
+  - pandas
+  - plotly
+  - pip
+  - python >=3.10

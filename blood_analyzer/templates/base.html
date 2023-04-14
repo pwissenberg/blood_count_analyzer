@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <script type="application/javascript" src="/static/javascript/ButtonMenu.js"></script>
+
+    <head>
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/blood_icon.png') }}">
+        <title>{% block title %} {% endblock%}</title>
+    </head>
+
+</head>
+
+<body>
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <img src="{{ url_for('static', filename='images/blood_icon.png') }}" width="40" height="32"
+                        alt="Example SVG">
+                </a>
+                <h1 class="text-white" style="padding-left: 10px; padding-right: 10px;">Blood Analyzer</h1>
+
+                <!-- Define title for the tab -->
+                {% block header %} {% endblock %}
+
+                <div class="text-end">
+                    <button type="button" class="btn btn-danger" id="bug-btn">
+                        <a href="mailto:paul.wissenberg@leukocare.com?subject=Example Subject&body=Hey Paul,%0D%0A%0D%0AUnfortunately, I broke Flash. I have attached a screenshot of the error. %0D%0APls fix! %0D%0A%0D%0ATODO: ATTACH SCREENSHOT OF ERROR or DESCRIBE ERROR %0D%0A%0D%0AKind regards,%0D%0A%0D%0Flash-Fan"
+                            style="color:black"> Report
+                            <b>BUG!</b></a></button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="row" style="padding-top: 30px;">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            {% block content %} {% endblock %}
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+
+<div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+        style="padding: 40px;">
+        <p class="col-md-4 mb-0 text-muted">Made with &#10084;!</p>
+
+        <a href="/"
+            class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+            <svg class="bi me-2" width="40" height="32">
+                <use xlink:href="#bootstrap"></use>
+            </svg>
+        </a>
+
+        <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item"><a href="idea" class="nav-link px-2 text-muted">Analyze</a></li>
+            <li class="nav-item"><a href="biologics-database" class="nav-link px-2 text-muted">Your history</a>
+            </li>
+        </ul>
+    </footer>
+</div>
+
+
+
+</html>
