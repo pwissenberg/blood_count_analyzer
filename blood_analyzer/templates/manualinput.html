@@ -1,0 +1,51 @@
+{% extends 'base.html'%}
+
+{% block header%}
+<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+  <li><a href="biologics-database" class="nav-link px-2 text-white">Upload your Report</a></li>
+  <li><a href="biologics-database" class="nav-link px-2 text-secondary">Enter values manually</a></li>
+  <li><a href="#" class="nav-link px-2 text-white">Your report</a></li>
+</ul>
+{% endblock %}
+
+{% block content%}
+<h2>Upload manually all the measured Biomarkers in your Blood Count</h2>
+<hr>
+<p>Are you a biologically <strong>male</strong> or <strong>female</strong>?</p>
+
+<style>
+  .form-check-input:checked[type="radio"] {
+    background-color: #8B0000;
+    border-color: #8B0000;
+  }
+</style>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femal" value="female" checked>
+  <label class="form-check-label" for="inlineRadio2">female</label>
+</div>
+
+<div class="form-check form-check-inline" id="data-set-selector">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="male" value="male">
+  <label class="form-check-label" for="inlineRadio1">male</label>
+</div>
+
+<form>
+  <div class="form-group">
+    <label for="formControlRange">Example Range input</label>
+    <input type="range" class="form-control-range" id="formControlRange">
+    <span id="rangeValue">0</span>
+  </div>
+</form>
+
+<form>
+</form>
+
+<script>
+  const rangeInput = document.getElementById('formControlRange');
+  const rangeValue = document.getElementById('rangeValue');
+
+  rangeInput.addEventListener('input', function () {
+    rangeValue.textContent = rangeInput.value;
+  });
+</script>
+{% endblock %}

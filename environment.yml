@@ -7,3 +7,6 @@ dependencies:
   - plotly
   - pip
   - python >=3.10
+  - pytesseract
+  - pdf2image
+  - dfminer.six

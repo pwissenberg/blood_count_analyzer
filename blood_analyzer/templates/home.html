@@ -6,11 +6,24 @@ FLASH - GSRS Data Set
 
 {% block header%}
 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-    <li><a href="biologics-database" class="nav-link px-2 text-secondary">Analyze</a></li>
-    <li><a href="#" class="nav-link px-2 text-white">Your history</a></li>
+    <li><a href="biologics-database" class="nav-link px-2 text-secondary">Upload your Report</a></li>
+    <li><a href="/manual-input" class="nav-link px-2 text-white">Enter values manually</a></li>
+    <li><a href="#" class="nav-link px-2 text-white">Your report</a></li>
 </ul>
 {% endblock %}
 
 {% block content %}
-<p>Test</p>
+<h2>Upload the your Blood Count</h2>
+<div>
+    <label for="formFileLg" class="form-label">Your selected Blood Count Report(PDF)</label>
+    <input class="form-control form-control-lg" id="formFileLg" type="file" accept=".pdf">
+
+</div>
+<hr>
+<div class="d-grid gap-2">
+    <button class="btn btn-danger" type="button" style="padding-top: 10px;">Submit your Test</button>
+</div>
+
+
+
 {% endblock %}
